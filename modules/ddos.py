@@ -54,7 +54,7 @@ class DoS:
 		for i in self.threads:
 			i.join()
 
-Tor = input('[?] Вы Хотели Использовать Tor (У/N): ').lower()
+Tor = input('[?] Вы Хотите Использовать Tor (У/N): ').lower()
 host = input('[*] Введите Адрес Целевого Хоста: ')
 port = int(input('[*] Введите Целевой Порт Для Атаки: '))
 threads = int(input('[*] Введите Количество Атак: '))
