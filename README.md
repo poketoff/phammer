@@ -12,13 +12,7 @@ If you encounter problems run the following commands:
 pip install colorama
 pip install progressbar
 
-|
-|
-|
-|
-|
-|
-|
+######################################################
 
 Как установить инструмент?
 ----------------------------------------------------
