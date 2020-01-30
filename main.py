@@ -4,7 +4,6 @@ from datetime import datetime
 from threading import Thread
 import time
 import sys
-import requests
 import os
 import socket
 import random
@@ -96,6 +95,8 @@ def show_main_menu():
 	print("[1]DDoS-Site")
 	print("[2]DDoS-ip")
 	print("[3]Check Port")
+	print("[4]Repair module")
+
 show_main_menu()
 
 choice = input(Fore.RED + "> ")
@@ -106,3 +107,4 @@ if choice == "0":
 
 elif choice == "1":
 	from ddos import DoS
+elif choice == "4"
