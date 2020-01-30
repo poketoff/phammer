@@ -1,6 +1,5 @@
 # phammer
 
-How to install tol?
-
-git clone https://github.com/poketoff/phammer
+How to install tool?
 ----------------------------------------------------
+git clone https://github.com/poketoff/phammer
