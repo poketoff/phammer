@@ -9,8 +9,7 @@ git clone https://github.com/poketoff/phammer
 
 If you encounter problems run the following commands:
 ----------------------------------------------------
-pip install colorama
-pip install progressbar
+pip install colorama; pip install progressbar
 
 ######################################################
 
@@ -21,5 +20,4 @@ git clone https://github.com/poketoff/phammer
 
 При возникновении проблем выполните следующие команды:
 ----------------------------------------------------
-pip install colorama
-pip install progressbar
+pip install colorama; pip install progressbar
