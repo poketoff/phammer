@@ -1,41 +1,45 @@
+from modules.banners import *
 from colorama import Fore, Back, Style
-from datetime import datetime
-from threading import Thread
-import time
-import sys
-import os
-import socket
 import random
-import threading
+import time
 import progressbar
 
-# Вывод poket
-from modules.banner import *
+city_list = [banFirst, banSecond, banThird]
+print(random.choice(city_list))
 
-print(Style.RESET_ALL)
+print(Fore.GREEN + 'Инициализация')
+time.sleep(3)
+bar = progressbar.ProgressBar().start() # Создаём новый progress bar
+ 
+for t in range(101):
+    bar.update(t) # Таким образом можно устанавливать значение.
+    time.sleep(0.01)
 
-# Вызов инициализации
-from modules.defs import initializationClass
+bar.finish() # Заканчиваем обновлять -- далее можно
 
-# Вызов проверки хеша
-from modules.defs import initialization_hashClass
-from modules.defs import hash_checkClass
+def showMenu(): # Отрисовка главного меню
+    print(Fore.BLUE + "=======================================")
+    print(Fore.WHITE + "       [1]DDoS")
+    print(Fore.WHITE + "       [2]Check Port")
+    print(Fore.WHITE + "       [3]Mac Changer")
+    print(Fore.WHITE + "       [00]exit")
+    print(Fore.BLUE + "=======================================")
+showMenu()
 
-# Вызов меню
-from modules.defs import show_main_menuClass
+choise = input('[?] ')
 
-choice = input(Fore.RED + "[?]> ")
-print(Style.RESET_ALL)
+if choise == '1':
+    from modules.ddos import ddos
 
-# Логика меню
-if choice == "0":
-    exit("ТВОЙ IP УЖЕ У ФСБ :3")
+elif choise == '2':
+    from modules.check import *
 
-elif choice == "1":
-    from modules.ddos import DoS
-elif choice == "2":
-    from modules.scan import *
-elif choice == "3":
-    from modules.repair import repair_module
-elif choice == "4":
-    from modules.mac import *
+elif choise == '3':
+    pass
+
+else:
+    print(Style.RESET_ALL)
+    print(Back.RED + '\nunsapported function')
+    print(Style.RESET_ALL)
+    showMenu()
+
